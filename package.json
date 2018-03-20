@@ -4,7 +4,7 @@
   "description": "oba project with a server",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/VincentKempers/performance-matters-server-side/issues"
   },
-  "homepage": "https://github.com/VincentKempers/performance-matters-server-side#readme"
+  "homepage": "https://github.com/VincentKempers/performance-matters-server-side#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.17.2",
+    "request": "^2.85.0"
+  }
 }
