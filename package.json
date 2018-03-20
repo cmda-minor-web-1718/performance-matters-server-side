@@ -1,0 +1,19 @@
+{
+  "name": "performance-matters-server-side",
+  "version": "1.0.0",
+  "description": "oba project with a server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentKempers/performance-matters-server-side.git"
+  },
+  "author": "vincent kempers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentKempers/performance-matters-server-side/issues"
+  },
+  "homepage": "https://github.com/VincentKempers/performance-matters-server-side#readme"
+}
