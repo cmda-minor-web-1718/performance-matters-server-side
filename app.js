@@ -7,17 +7,18 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-const port = 3000,
-    host = 'https://www.pokeapi.co/api/v2/pokemon/?limit=151'
+const port = 3000
 
-fetch( 'https://www.pokeapi.co/api/v2/pokemon/?limit=151' )
-    .then(res => res.json())
-    .then(json => console.log(json))
-
-
-app.get('/', function(json){
-    // console.log(res)
-    ejs.render('index.ejs', {pokemon: json})
+app.get('/', function(req, res){
+    fetch( 'https://www.pokeapi.co/api/v2/pokemon/?limit=151' )
+        .then(res => {
+            return res.json()
+        })
+        .then(json => {
+            console.log(json)
+            // const data = json.results
+            res.render('index.ejs', {pokemon: json.results})
+        })
 })
 
 app.listen(port, function(){
