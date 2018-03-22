@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request');
+var bodyParser = require('body-parser');
 var app = express();
 
 var sparqlquery =  `
@@ -29,14 +30,43 @@ var sparqlquery =  `
 var encodedquery = encodeURIComponent(sparqlquery);
 var host = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=' + encodedquery + '&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on'
 
+app.set('view engine', 'pug');
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.get('/', function (req, res) {
-  res.send('Hola, Comestas');
   request(host, function(error, request, body){
     var data = JSON.parse(body);
     var rows = data.results.bindings;
-    console.log(rows);
-    
-  })
+    var collection = rows.map(function(d){
+      return {
+        title: d.title.value,
+        desc: d.desc.value,
+        date: d.date.value
+      };
+    });
+    res.render('index', { data: collection });
+  });
 });
+
+
+app.get('/:id', function (req, res){
+  request(host, function(error, request, body){
+    var data = JSON.parse(body);
+    var rows = data.results.bindings;
+    var collection = rows.map(function(d){
+      if (d.title.value === req.params.id) {
+        return {
+          title: d.title.value,
+          desc: d.desc.value,
+          slug: d.title.value.replace(/[ ]/g, '').toLowerCase(),
+          img: d.img.value
+        }
+      }
+    });
+    res.render('detail', { data: collection });
+  });
+});
+
+
 
 app.listen(3000);
