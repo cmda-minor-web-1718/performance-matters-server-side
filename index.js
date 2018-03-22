@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request');
+var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 
@@ -32,8 +33,14 @@ var host = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint/
 
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'stylesheets')));
+app.use(express.static(path.join(__dirname, 'scripts')));
 
-app.get('/', function (req, res) {
+app.get('/', function(req,res){
+  res.redirect('/poster')
+})
+
+app.get('/poster', function (req, res) {
   request(host, function(error, request, body){
     var data = JSON.parse(body);
     var rows = data.results.bindings;
@@ -49,8 +56,10 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/:id', function (req, res){
-  request(host, function(error, request, body){
+
+
+app.get('/poster/:id', function (req, res){
+  request(host + req.params.id, function(error, request, body){
     var data = JSON.parse(body);
     var rows = data.results.bindings;
     var collection = rows.map(function(d){
