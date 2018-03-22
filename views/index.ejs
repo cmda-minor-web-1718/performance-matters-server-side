@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Het werkt joe</h1>
-    
-</body>
-</html>
+<% include header %>
+
+    <% for (var i = 0; i < pokemon.length; i++) { %>}
+
+        <h1><% pokemon[i].name %></h1>
+        
+    <% } %>
+
+<% include footer %>    
