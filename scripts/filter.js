@@ -1,18 +1,26 @@
+(function(){
+  const searchItem = document.createElement('input');
+  const container = document.querySelector('#myUL');
+
+  searchItem.placeholder ="Zoek een poster";
+
+  container.prepend(searchItem);
 
 
-function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
+  searchItem.addEventListener('keyup', function(e) {
+      let filter, ul, li, a, i;
 
-    for (i = 0; i < li.length; i++) {
+      filter = searchItem.value.toLowerCase();
+      li = container.getElementsByTagName('li');
+
+      for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].classList.remove('hidden');
+        if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
         } else {
-            li[i].classList.add('hidden');
+          li[i].style.display = "none";
         }
-    }
-}
+      }
+    });
+
+}())

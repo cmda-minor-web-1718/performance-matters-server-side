@@ -25,6 +25,11 @@ body {
   overflow-y: hidden;
   overflow-x: scroll;
 }
+header h1 {
+  text-align: center;
+  color: white;
+}
+
 
 #posters ul > li {
   margin-right: 2em;
@@ -35,7 +40,7 @@ body {
 
 #posters ul > li:hover {
   /* color: white; */
- filter: brightness(1);
+  filter: brightness(1);
   font-family: sans-serif;
 }
 
@@ -52,9 +57,13 @@ body {
 
 #detail {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#detail > h3, #detail > p {
+  color:white;
 }
 
 p, a {
@@ -80,7 +89,6 @@ section {
 }
 
 main {
-  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   margin: -10px;
   min-height: 100vh;
