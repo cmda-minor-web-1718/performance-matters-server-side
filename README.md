@@ -11,7 +11,7 @@ Because of the time we had for the project (one week), we only had to implement 
 ## Audits
 To see how well the app performed, I used Google Audits.
 
-###Before
+### Before
 ![Google Audits before the server side change](https://i.imgur.com/MopOj35)
 You can see the web app already performs pretty good according to Google Audits, except for the progressive web app part. The first meaningfull paint is rendered after 2.34 seconds, and the first interactive after 3 seconds, which is pretty good for a 3G network.
 ![Google Chrome network test](https://i.imgur.com/JZfWdzK)
