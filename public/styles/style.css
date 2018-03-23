@@ -141,6 +141,10 @@ p {
     line-height: 1.3em;
 }
 
+.gone {
+    display: none;
+}
+
 .types,
 .weight {
     margin-bottom: 1em;
