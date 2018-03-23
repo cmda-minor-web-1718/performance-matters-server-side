@@ -1,7 +1,7 @@
 # performance-matters-server-side
 
 ## Poster Paradiso
-I used my OBA app for the app
+You can look up posters from old concerts! Of Paradiso
 
 ## How to run
 `npm install`
