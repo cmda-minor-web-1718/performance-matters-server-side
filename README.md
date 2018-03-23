@@ -24,8 +24,10 @@ to run the server
 ## audits
 
 ![audit results!](docImages/audit.png)
-_99 performance matters_
+_99! performance matters_
 
 ![audit results!](docImages/fast3g.png)
+_Fast 3g Speeds_
 
 ![audit results!](docImages/slow3g.png)
+_Slow 3g Speeds_
