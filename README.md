@@ -2,6 +2,12 @@
 This is the repo of the assignment 2 of Performance Matters: Server Side.
 The goal of the assignment was to adapt an excisting app from client side to server side. The server runs on Node.js, and several packages. I've never worked with Node.js before, so I had quite some mental breakdowns.
 
+## Installation
+To run the app, you don't need to install anything. All the packages and node are installed locally. To run the web app, you need to navigate to the root folder, and run the following command in your terminal:
+`node app.js`
+
+The server will start, and run on [localhost:3000](localhost:3000)
+
 ## The app
 The goal of the app itself is to get information about a specific Pokémon. You can search for a Pokémon and see it's information.
 For this assignment I took the web app I made for Web Apps From Scratch (WAFS). The intention of the assignment was to take a assignment I made for the OBA, that used SPARQL. The first two days I tried to make it work, but I had so many issues with SPARQL, that I decided to use my WAFS assignment, which uses a regular API. 
@@ -21,4 +27,7 @@ This result is says more than the previous, since the api is loaded the last. Th
 ![Google Audits after the server side change](https://i.imgur.com/ACmqLFr.png)
 Allthough the web app pretty fast, the server side change improved the web app even more. It gets a 98 out of 100, and the progressive web app score improved by 9. The first meaningfull paint is improved by 0.9 seconds, and the first interactive by 1.3 seconds. Best practices and SEO score are improved as well by 7 and 12.
 ![Google Chrome network test](https://i.imgur.com/Je79cEU.png)
-The results of the Google Chrome network test really pleased me. The web app takes around 2,25 seconds to load on slow 3G, which is roughly 2,25 seconds faster than before, a decrease of 50%. Since the api call is made on the server, the browser doesn't need to render all the information.
+The results of the Google Chrome network test really pleased me. The web app takes around 2,25 seconds to load on slow 3G, which is roughly 2,25 seconds faster than before, a decrease of 50%. Since the api call is made on the server, the browser doesn't need to render all the information. Something that I do need to keep in mind, is that the server runs on my own laptop, so it doesn't need to connect to an external server, which takes some time as well. The server side web app will still be faster than the client side web app.
+
+## Progressive Enhancement
+The main focus of the app, which is looking for Pokémon, works without Javascript, since it is loaded on the server. When you enable Javascript, there appears an input field, where you can search for Pokémon alphabetically. 
