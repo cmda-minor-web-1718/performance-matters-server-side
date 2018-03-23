@@ -4,7 +4,7 @@ block content
   h2 Posters
   form(action="/", method="post")
         label Search for poster names: 
-          input(name="search", onkeyup="myFunction()" placeholder="Zoek posters")#myInput
+          input(name="search", onkeyup="filterFunction()" placeholder="Zoek posters")#myInput
   ul#myUL
     each key in data
       li

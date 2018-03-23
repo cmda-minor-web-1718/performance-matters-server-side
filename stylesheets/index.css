@@ -34,18 +34,18 @@ body {
 }
 
 #posters ul > li:hover {
-  color: white;
+  /* color: white; */
  filter: brightness(1);
   font-family: sans-serif;
 }
 
 #posters ul li > a {
-  color: white;
+  /* color: white; */
   font-family: sans-serif;
 }
 
 #posters ul li > a:hover {
-  color: white;
+  /* color: white; */
   opacity: 1;
   font-family: sans-serif;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 p, a {
-  color: white;
+  color: black;
   font-weight: bolder;
   max-width: 30em;
   text-shadow: 2px black;
@@ -98,6 +98,13 @@ h3 {
 
 li {
   background-color: white;
+  margin: 2em;
+}
+
+li > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 input {
