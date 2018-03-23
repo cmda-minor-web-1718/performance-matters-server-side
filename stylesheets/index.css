@@ -93,8 +93,13 @@ ul {
 
 
 h3 {
-  color:white;
+  color: black;
 }
+
+li {
+  background-color: white;
+}
+
 input {
     padding: 2em;
     font-size: 1.2em;

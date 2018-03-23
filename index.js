@@ -56,8 +56,6 @@ app.get('/poster', function (req, res) {
 });
 
 
-
-
 app.get('/poster/:id', function (req, res){
   request(host + req.params.id, function(error, request, body){
     var data = JSON.parse(body);

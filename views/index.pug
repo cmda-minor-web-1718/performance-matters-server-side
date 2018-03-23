@@ -5,7 +5,6 @@ block content
   form(action="/", method="post")
         label Search for poster names: 
           input(name="search", onkeyup="myFunction()" placeholder="Zoek posters")#myInput
-        button(type="submit") search
   ul#myUL
     each key in data
       li
