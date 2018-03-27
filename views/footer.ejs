@@ -1,3 +1,8 @@
         <script src="../script/script.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('../serviceworker.js');
+            }
+        </script>
     </body>
 </html>

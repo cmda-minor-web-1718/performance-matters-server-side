@@ -1,5 +1,4 @@
 (function() {
-    console.log('hallo')
     const input = document.createElement('input'),
         button = document.createElement('a'),
         form = document.querySelector('form'),

@@ -1,7 +1,9 @@
 const ejs = require('ejs')
 const express = require('express')
+var request = require('request')
 const fetch = require('node-fetch')
 const browserify = require('browserify')
+const ngrok = require('ngrok')
 
 const app = express()
 
@@ -10,16 +12,30 @@ app.use(express.static('public'))
 
 const port = 3000
 
-app.get('/', function(req, res){
-    fetch( 'https://www.pokeapi.co/api/v2/pokemon/?limit=151' )
-        .then(res => {
-            return res.json()
-        })
-        .then(json => {
-            console.log(json)
-            // const data = json.results
-            res.render('index.ejs', {pokemon: json.results})
-        })
+let pokemon
+
+const host = 'https://www.pokeapi.co/api/v2/pokemon/'
+
+app.get('/', function(req, res) {
+    fetch( host + '?limit=151')
+        
+    .then(res => {
+        return res.json()
+    })
+        
+    .then(json => {
+        let pokemonUrl = []
+        res.render('index.ejs', {pokemon: json.results})
+        pokemon = json.results
+    })
+})
+
+app.get('/pokemon/:name', function(req, res) {
+    console.log(host + req.params.name)
+    request( host + req.params.name, function(error, response, body) {
+        const data = JSON.parse(body)
+        res.render('pokemon.ejs', {pokemon: data})
+    })
 })
 
 app.listen(port, function(){

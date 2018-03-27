@@ -1,0 +1,19 @@
+<% include header %>
+
+    <h1 class="pokemonName"><%= pokemon.name %></h1>
+    
+    <div class="sprites">
+        <img src="<%= pokemon.sprites.front_default %>" alt="Front of <%= pokemon.name %>">
+        <img src="<%= pokemon.sprites.back_default %>" alt="Back of <%= pokemon.name %>">
+        <img src="<%= pokemon.sprites.front_shiny %>" alt="Front of shiny <%= pokemon.name %>">
+        <img src="<%= pokemon.sprites.back_shiny %>" alt="Back of shiny <%= pokemon.name %>">
+    </div>
+
+    <p><%= pokemon.height / 10 %> Meter</p>
+    <p><%= pokemon.weight / 10 %> Kilogram</p>
+
+    <% pokemon.stats.forEach(stat => { %>
+        <p><%= stat.stat.name %> <%= stat.base_stat %></p>
+    <% }) %>
+
+<% include footer %>

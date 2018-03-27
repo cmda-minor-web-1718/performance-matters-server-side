@@ -1,0 +1,8 @@
+{
+    "name": "Online Pokédex",
+    "short_name": "Pokédex",
+    "description": null,
+    "dir": "auto",
+    "lang": "en-EN",
+    "orientation": "portrait"
+  }

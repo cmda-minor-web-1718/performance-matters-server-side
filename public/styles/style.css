@@ -214,6 +214,21 @@ p {
     display: none;
 }
 
+.pokemonName {
+    text-align: center;
+}
+
+.pokemonName::first-letter {
+    text-transform: uppercase;
+}
+
+.sprites {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: 0 auto;
+}
+
 @keyframes visibility {
     0% { visibility: hidden; }
     100% { visibility: visible; }
