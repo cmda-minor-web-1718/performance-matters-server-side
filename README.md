@@ -2,6 +2,8 @@
 This is the repo of the assignment 2 of Performance Matters: Server Side.
 The goal of the assignment was to adapt an excisting app from client side to server side. The server runs on Node.js, and several packages. I've never worked with Node.js before, so it took some time for me to understand how it works.
 
+A link to a live version van be found [https://performance-matters-server-side-groqrjgpjv.now.sh/](HERE)
+
 ## Installation
 To run the app, you don't need to install anything. All the packages and node are installed locally. To run the web app, you need to navigate to the root folder, and run the following command in your terminal:
 
