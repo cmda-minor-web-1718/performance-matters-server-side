@@ -31,7 +31,6 @@ app.get('/', function(req, res) {
 })
 
 app.get('/pokemon/:name', function(req, res) {
-    console.log(host + req.params.name)
     request( host + req.params.name, function(error, response, body) {
         const data = JSON.parse(body)
         res.render('pokemon.ejs', {pokemon: data})
