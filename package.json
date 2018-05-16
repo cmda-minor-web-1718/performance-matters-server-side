@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "expose": "ngrok http 3000",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "browserify ./public/script/script.js | uglifyjs -cm > public/script/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,20 @@
     "request": "^2.85.0"
   },
   "devDependencies": {
-    "babelify": "^8.0.0"
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "uglify-js": "^3.3.25"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ]
+    ]
   }
 }

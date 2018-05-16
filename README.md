@@ -12,6 +12,7 @@ A link to a live version can be found [here](https://performance-matters-server-
 - **[Audit after adaptations](#audit-after-adaptations)**
 - **[Progressive enhancement](#progressive-enhancement)**
 - **[Service worker](#service-worker)**
+= **[Browserify](#browserify)**
 
 ## Installation
 
@@ -74,10 +75,6 @@ According to the audit, I could save 700 ms by reducing render-blocking styleshe
 
 ![Google Audits after the CSS changes](https://i.imgur.com/ACmqLFr.png)
 
-### Browserify
-
-
-
 ## Audit after adaptations
 
 ![Google Audits after all the changes](https://i.imgur.com/ACmqLFr.png)
@@ -95,3 +92,7 @@ The main focus of the app, which is looking for Pokémon, works without Javascri
 ## Service worker
 
 If a user has visited a page, the service workers saves the content. When the user is offline, the page can still be visited, which adds a big functionality.
+
+## Browserify
+
+To bundle the javascript files, I used browserify, and uglify to compress the js file.
