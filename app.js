@@ -4,8 +4,11 @@ var request = require('request')
 const fetch = require('node-fetch')
 const browserify = require('browserify')
 const ngrok = require('ngrok')
+const compression = require('compression')
 
 const app = express()
+
+app.use(compression())
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
