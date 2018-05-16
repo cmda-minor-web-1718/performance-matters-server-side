@@ -74,6 +74,10 @@ According to the audit, I could save 700 ms by reducing render-blocking styleshe
 
 ![Google Audits after the CSS changes](https://i.imgur.com/ACmqLFr.png)
 
+### Browserify
+
+
+
 ## Audit after adaptations
 
 ![Google Audits after all the changes](https://i.imgur.com/ACmqLFr.png)

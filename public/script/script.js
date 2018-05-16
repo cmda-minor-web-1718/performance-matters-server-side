@@ -1,10 +1,7 @@
+import {input, form, button, pokemonLi, pokemonA} from './variables'
+
 (function() {
-    const input = document.createElement('input'),
-        button = document.createElement('a'),
-        form = document.querySelector('form'),
-        pokemonLi = document.querySelectorAll('.pokemon'),
-        pokemonA = document.querySelectorAll('.pokemon a')
-    
+
     form.appendChild(input)
     input.placeholder = "Search for a Pokémon"
         
