@@ -1,0 +1,9 @@
+        <script src="../script/bundle.js"></script>
+        <link rel="stylesheet" href="../styles/big-screen.css" media="(min-width: 50em)">
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('../serviceworker.js');
+            }
+        </script>
+    </body>
+</html>

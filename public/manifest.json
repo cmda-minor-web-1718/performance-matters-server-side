@@ -1,0 +1,18 @@
+{
+    "name": "Online Pokédex",
+    "short_name": "Pokédex",
+    "description": null,
+    "dir": "auto",
+    "lang": "en-EN",
+    "orientation": "portrait",
+    "background_color": "rgb(255, 252, 213)",
+    "theme_color:": "rgb(255, 252, 213)",
+    "start_url": "/?homescreen=1",
+    "icons": [
+      {
+        "src": "../images/pokeball.jpg",
+        "sizes": "300x300",
+        "type": "image/jpg"
+      }
+    ]
+  }
