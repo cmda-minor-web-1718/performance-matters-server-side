@@ -1,5 +1,9 @@
 <% include header %>
 
+<div class="pokemonInfo">
+
+    <a href="../#pokemon">Terug naar overzicht</a>
+
     <h1 class="pokemonName"><%= pokemon.name %></h1>
     
     <div class="sprites">
@@ -15,5 +19,7 @@
     <% pokemon.stats.forEach(stat => { %>
         <p><%= stat.stat.name %> <%= stat.base_stat %></p>
     <% }) %>
+
+</div>
 
 <% include footer %>

@@ -25,11 +25,4 @@
     });
 })()
 
-},{"./variables":2}],2:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-      value: true
-});
-
 },{}]},{},[1]);
